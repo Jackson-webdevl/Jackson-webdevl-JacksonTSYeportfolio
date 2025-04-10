@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive eProfile</title>
-    <link id="theme-style" rel="stylesheet" href="/Css/style3.css">
+    <link id="theme-style" rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -32,16 +32,16 @@
         <section class="edu">
             <h2 id="education">Education Background</h2>
             <div>
-                <img src="/img/GraduateCert_page-0001.jpg" alt=curtin_cert>
+                <img src="img/GraduateCert_page-0001.jpg" alt=curtin_cert>
                 <h3>Bachelor of Commerce majoring in Banking and Finance</h3>
             </div>
             <div>
-                <img src="/img/Diplomacert.JPG" alt=Dip_curtin_cert>
+                <img src="img/Diplomacert.JPG" alt=Dip_curtin_cert>
                 <h3>Diploma of Commerce</h3>
             </div>
         </section>
         <audio controls autoplay loop>
-            <source src="/Rainy Day.mp3" type="audio/mpeg">
+            <source src="Rainy Day.mp3" type="audio/mpeg">
         </audio>
     </main>
     <footer>
@@ -55,10 +55,10 @@
 
             if (currentTheme === 'dark') {
                 newTheme = 'light';
-                document.querySelector('#theme-style').href = '/Css/style3.css';
+                document.querySelector('#theme-style').href = 'css/style3.css';
             } else {
                 newTheme = 'dark';
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
 
             currentUrl.searchParams.set('theme', newTheme);
@@ -78,7 +78,7 @@
             const currentUrl = new URL(window.location.href);
             let theme = currentUrl.searchParams.get('theme') || 'light';
             if (theme === 'dark') {
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
             updateNavLinks(theme);
         };
