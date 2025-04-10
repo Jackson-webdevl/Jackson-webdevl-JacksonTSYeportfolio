@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive eProfile</title>
-    <link id="theme-style" rel="stylesheet" href="/Css/style3.css">
-    <link rel="stylesheet" href="/Css/responsive.css">
+    <link id="theme-style" rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
             <h2 id="contact">Contact</h2>
             <div>
                 <section class="contact">
-                    <img src="/img/Linkedinlogo.png" alt=LinkedIn class=LinkedIn>
+                    <img src="img/Linkedinlogo.png" alt=LinkedIn class=LinkedIn>
                     <a href="https://www.linkedin.com/in/jackson-ting-shi-yuan-981b371b1/">
                         <p>Click to access my LinkedIn Profile!</p>
                     </a>
@@ -43,12 +43,12 @@
             </div>
         </div>
         <audio controls autoplay loop>
-            <source src="/Rainy Day.mp3" type="audio/mpeg">
+            <source src="Rainy Day.mp3" type="audio/mpeg">
         </audio>
 
         <div class="video-container">
             <video controls>
-                <source src="/Demo Video.mp4" type="video/mp4">
+                <source src="Demo Video.mp4" type="video/mp4">
             </video>
             <p class="video-description"> This is the previous work. A simple drag and drop project.</p>
         </div>
@@ -65,10 +65,10 @@
 
             if (currentTheme === 'dark') {
                 newTheme = 'light';
-                document.querySelector('#theme-style').href = '/Css/style3.css';
+                document.querySelector('#theme-style').href = 'css/style3.css';
             } else {
                 newTheme = 'dark';
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
 
             currentUrl.searchParams.set('theme', newTheme);
@@ -88,7 +88,7 @@
             const currentUrl = new URL(window.location.href);
             let theme = currentUrl.searchParams.get('theme') || 'light';
             if (theme === 'dark') {
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
             updateNavLinks(theme);
         };
