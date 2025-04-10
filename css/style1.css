@@ -80,22 +80,16 @@ header a:hover {
 }
 .edu {
   background-color: white;
-  justify-content: space-evenly;
-  align-items: center;
-  padding: 100px 180px 80px;
-  display: flex;
-}
-.edu div {
-  text-align: center;
 }
 .edu h2 {
   margin-bottom: 2vw;
 }
 .edu img {
-  width: 50%;
+  width: 30%;
   height: auto;
-  border-radius: 10px;
-  border: #000 solid;
+  display: block;
+  margin: 0 auto;
+  border: solid #000;
 }
 .edu h3 {
   text-align: center;
