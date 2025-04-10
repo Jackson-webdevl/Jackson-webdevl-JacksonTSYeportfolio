@@ -233,10 +233,8 @@ footer {
     padding-top: 1px;
   }
   .contact {
-    padding-left: 200px;
-  }
-  .contact p {
-    margin: 0;
+    padding: 10px;
+    margin-bottom: 20%;
   }
   footer {
     text-align: justify;
