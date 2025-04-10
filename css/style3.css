@@ -1,0 +1,245 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+header {
+  background-image: url(../img/header_background.jpg);
+  padding: 20px;
+}
+.theme-switcher {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.theme-toggle {
+  background: linear-gradient(135deg, #a63d40 10%, #fad0c4 100%);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+.theme-toggle:hover {
+  background: linear-gradient(135deg, #d63a0f 10%, #ff9a9e 100%);
+}
+h1 {
+  color: rgba(255, 68, 0, 0.73);
+  text-shadow: 0.5px 0.5px #ff0000;
+  padding-left: 4vw;
+  text-align: center;
+}
+h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+header ul {
+  color: white;
+  right: 5vw;
+  top: 0;
+  line-height: 80px;
+  font-size: large;
+  text-align: center;
+}
+header li {
+  display: inline;
+  margin: 3vw;
+}
+header a {
+  color: rgba(255, 68, 0, 0.73);
+  text-decoration: none;
+  text-shadow: 0.5px 0.5px #ff0000;
+  text-align: center;
+}
+header a:hover {
+  text-decoration-line: underline;
+}
+.menu {
+  display: none;
+}
+.about img {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+.about p {
+  text-align: justify;
+  margin: 2vw;
+  font-size: large;
+  background-color: rgba(204, 197, 197, 0.679);
+}
+.edu {
+  background-color: white;
+}
+.edu h2 {
+  margin-bottom: 2vw;
+}
+.edu img {
+  width: 30%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border: solid #000;
+}
+.edu h3 {
+  text-align: center;
+  margin-bottom: 2vw;
+}
+.work {
+  background-color: white;
+}
+.work h2 {
+  text-align: center;
+  text-decoration: underline;
+}
+.work ul {
+  text-align: left;
+  font-size: x-large;
+  margin-left: 15vw;
+  margin-top: 2vw;
+  margin-bottom: 29%;
+  line-height: 1.5;
+}
+.img-galley {
+  width: 80%;
+  margin: 100px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 30px;
+}
+.img-galley img {
+  width: 100%;
+  cursor: pointer;
+}
+.img-galley img:hover {
+  transform: scale(0.8) rotate(-15deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.contact {
+  text-align: center;
+  margin-bottom: 30%;
+}
+.contact h2 {
+  text-align: center;
+  line-height: 1.5;
+}
+.video-container {
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.video-description {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  font-style: italic;
+}
+audio {
+  position: relative;
+  bottom: 10px;
+  left: 10px;
+  width: 100px;
+  height: 20px;
+  opacity: 0.6; /* semi-transparent */
+  z-index: 1000;
+}
+footer {
+  text-align: center;
+  width: 100%;
+  background-color: #000;
+  color: white;
+  position: absolute;
+}
+
+/* This is the comment line for Responsive website */
+@media screen and (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+  header h1 {
+    left: 70%;
+  }
+  .menu {
+    display: block;
+    background-color: transparent;
+    color: white;
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    border: none;
+    cursor: pointer;
+  }
+  #nav-menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+  }
+
+  #nav-menu ul.show {
+    display: flex;
+  }
+  .edu {
+    flex-direction: column;
+  }
+  .cert,
+  .cert2 {
+    flex-direction: column;
+    padding: 30px 0;
+    padding-bottom: 10px;
+  }
+  .cert2 {
+    padding-top: 1px;
+  }
+  .contact {
+    padding-left: 200px;
+  }
+  .contact p {
+    margin: 0;
+  }
+  footer {
+    text-align: justify;
+    text-align: center;
+  }
+}

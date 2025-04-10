@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive eProfile</title>
+    <link id="theme-style" rel="stylesheet" href="/Css/style3.css">
+</head>
+
+<body>
+    <div class="theme-switcher">
+        <button class="theme-toggle" onclick="toggleTheme()">Switch Theme</button>
+    </div>
+    <header>
+        <section>
+            <button class="menu" onclick="toggleMenu()">&#9776;</button>
+            <h1> Jackson Ting Shi Yuan</h1>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a id="about-link" href="Index.html">About Me</a></li>
+                    <li><a id="education-link" class="active" href="education.html">Education</a></li>
+                    <li><a id="work-link" href="workexperience.html">Work Experiences</a></li>
+                    <li><a id="cert-link" href="certificate.html">Certification</a></li>
+                    <li><a id="contact-link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <br>
+    <main>
+        <section class="about">
+            <div class="me">
+                <h2>About myself</h2>
+                <img src="/img/JacksonPic.jpg" alt="Jackson Ting">
+            </div>
+            <p>I'm Jackson Ting Shi Yuan, a 27-year-old with a passion for both technology and finance. I'm currently a
+                full-time Master's student in Information Technology Management (MITM) at UNIMAS while also working as a
+                part-time general insurance agent, part-time Unit trust and private retirement scheme consultant, and
+                freelance at my parent's company as an administrative executive.
+                When I'm not diving into IT or finance, you'll probably find me playing music—I enjoy the viola, piano,
+                drums, and trumpet. This space is where I share my thoughts, experiences, and interests.</p>
+        </section><br>
+        <audio controls autoplay loop>
+            <source src="/Rainy Day.mp3" type="audio/mpeg">
+        </audio>
+    </main>
+    <footer>
+        <p>Copyright &copy; 2025 Jackson TSY All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleTheme() {
+            const currentUrl = new URL(window.location.href);
+            const currentTheme = currentUrl.searchParams.get('theme');
+            let newTheme;
+
+            if (currentTheme === 'dark') {
+                newTheme = 'light';
+                document.querySelector('#theme-style').href = '/Css/style3.css';
+            } else {
+                newTheme = 'dark';
+                document.querySelector('#theme-style').href = '/Css/style1.css';
+            }
+
+            currentUrl.searchParams.set('theme', newTheme);
+            window.history.pushState({}, '', currentUrl);
+            updateNavLinks(newTheme);
+        }
+
+        function updateNavLinks(theme) {
+            document.getElementById('about-link').href = `Index.html?theme=${theme}`;
+            document.getElementById('education-link').href = `education.html?theme=${theme}`;
+            document.getElementById('work-link').href = `workexperience.html?theme=${theme}`;
+            document.getElementById('cert-link').href = `certificate.html?theme=${theme}`;
+            document.getElementById('contact-link').href = `contact.html?theme=${theme}`;
+        }
+
+        window.onload = function () {
+            const currentUrl = new URL(window.location.href);
+            let theme = currentUrl.searchParams.get('theme') || 'light';
+            if (theme === 'dark') {
+                document.querySelector('#theme-style').href = '/Css/style1.css';
+            }
+            updateNavLinks(theme);
+        }
+        function toggleMenu() {
+            const navMenu = document.querySelector('#nav-menu ul');
+            navMenu.classList.toggle('show');
+        }
+
+    </script>
+</body>
+
+</html>
