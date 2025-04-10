@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive eProfile</title>
-    <link id="theme-style" rel="stylesheet" href="/Css/style3.css">
+    <link id="theme-style" rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -32,7 +32,7 @@
         <section class="about">
             <div class="me">
                 <h2>About myself</h2>
-                <img src="/img/JacksonPic.jpg" alt="Jackson Ting">
+                <img src="img/JacksonPic.jpg" alt="Jackson Ting">
             </div>
             <p>I'm Jackson Ting Shi Yuan, a 27-year-old with a passion for both technology and finance. I'm currently a
                 full-time Master's student in Information Technology Management (MITM) at UNIMAS while also working as a
@@ -42,7 +42,7 @@
                 drums, and trumpet. This space is where I share my thoughts, experiences, and interests.</p>
         </section><br>
         <audio controls autoplay loop>
-            <source src="/Rainy Day.mp3" type="audio/mpeg">
+            <source src="Rainy Day.mp3" type="audio/mpeg">
         </audio>
     </main>
     <footer>
@@ -57,10 +57,10 @@
 
             if (currentTheme === 'dark') {
                 newTheme = 'light';
-                document.querySelector('#theme-style').href = '/Css/style3.css';
+                document.querySelector('#theme-style').href = 'css/style3.css';
             } else {
                 newTheme = 'dark';
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
 
             currentUrl.searchParams.set('theme', newTheme);
@@ -80,7 +80,7 @@
             const currentUrl = new URL(window.location.href);
             let theme = currentUrl.searchParams.get('theme') || 'light';
             if (theme === 'dark') {
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
             updateNavLinks(theme);
         }
