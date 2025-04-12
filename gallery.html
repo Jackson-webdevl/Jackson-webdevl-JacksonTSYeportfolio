@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Responsive eProfile</title>
-    <link id="theme-style" rel="stylesheet" href="/Css/style3.css">
+    <link id="theme-style" rel="stylesheet" href="css/style3.css">
 </head>
 
 <body>
@@ -33,18 +33,18 @@
     <main>
         <h2>Gallery</h2>
         <div class="full-img" id="fullImgBox">
-            <img src="/img/Drummajor.jpg" id="fullImg">
+            <img src="img/Drummajor.jpg" id="fullImg">
             <span onclick="closeFullImg()">X</span>
         </div>
 
         <div class="img-galley">
 
-            <img src="/img/Drummajor.jpg" alt="Drummajor picture" onclick="openFullImg(this.src)">
-            <img src="/img/Drummajor2.jpg" alt="Drummajor2 picture" onclick="openFullImg(this.src)">
-            <img src="/img/Group_photo.jpg" alt="Group photo" onclick="openFullImg(this.src)">
-            <img src="/img/Performance.jpg" alt="Performance" onclick="openFullImg(this.src)">
-            <img src="/img/Mc.jpg" alt="Mc" onclick="openFullImg(this.src)">
-            <img src="/img/Trumpet.jpg" alt="Trumpet" onclick="openFullImg(this.src)">
+            <img src="img/Drummajor.jpg" alt="Drummajor picture" onclick="openFullImg(this.src)">
+            <img src="img/Drummajor2.jpg" alt="Drummajor2 picture" onclick="openFullImg(this.src)">
+            <img src="img/Group_photo.jpg" alt="Group photo" onclick="openFullImg(this.src)">
+            <img src="img/Performance.jpg" alt="Performance" onclick="openFullImg(this.src)">
+            <img src="img/Mc.jpg" alt="Mc" onclick="openFullImg(this.src)">
+            <img src="img/Trumpet.jpg" alt="Trumpet" onclick="openFullImg(this.src)">
         </div>
         <p class="img-p">I have been a member of The Boys’ Brigade in Malaysia since 2011, starting as a regular
             member and
@@ -56,12 +56,12 @@
 
         <div class="video-container">
             <video controls>
-                <source src="/Demo Video.mp4" type="video/mp4">
+                <source src="Demo Video.mp4" type="video/mp4">
             </video>
             <p class="video-description"> This is the previous work. A simple drag and drop project.</p>
         </div>
         <audio controls autoplay loop>
-            <source src="/Rainy Day.mp3" type="audio/mpeg">
+            <source src="Rainy Day.mp3" type="audio/mpeg">
         </audio>
 
     </main>
@@ -78,10 +78,10 @@
 
             if (currentTheme === 'dark') {
                 newTheme = 'light';
-                document.querySelector('#theme-style').href = '/Css/style3.css';
+                document.querySelector('#theme-style').href = 'css/style3.css';
             } else {
                 newTheme = 'dark';
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
 
             currentUrl.searchParams.set('theme', newTheme);
@@ -102,7 +102,7 @@
             const currentUrl = new URL(window.location.href);
             let theme = currentUrl.searchParams.get('theme') || 'light';
             if (theme === 'dark') {
-                document.querySelector('#theme-style').href = '/Css/style1.css';
+                document.querySelector('#theme-style').href = 'css/style1.css';
             }
             updateNavLinks(theme);
         }
